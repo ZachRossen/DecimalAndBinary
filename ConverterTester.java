@@ -1,5 +1,3 @@
-package decimalAndBinary;
-
 import java.util.Scanner;
 
 public class ConverterTester {
