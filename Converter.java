@@ -1,18 +1,24 @@
+package decimalAndBinary;
+
 public class Converter {
 
 	public Converter() {
 
 	}
 
-	public String toDecimal(String binary) {
-		int decimal = 0;
-		for (int i = 0; i < binary.length(); i++) {
-			decimal += (binary.charAt(i) - '0') * (Math.pow(2, (binary.length() - i - 1)));
+	public long toDecimal(String binary) {
+		long decimal = 0;
+		long multiplier = 1;
+		String num = binary;
+		for (int i = num.length() - 1; i >= 0; i--) {
+			int c = num.charAt(i) - '0';
+			decimal += c * multiplier;
+			multiplier = multiplier * 2;
 		}
-		return "" + decimal;
+		return decimal;
 	}
 
-	public String toBinary(int decimal) {
+	public String toBinary(long decimal) {
 		if (decimal / 2 == 0) {
 			return "" + decimal % 2;
 		}
