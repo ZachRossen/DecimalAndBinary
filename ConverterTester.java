@@ -1,3 +1,5 @@
+package decimalAndBinary;
+
 import java.util.Scanner;
 
 public class ConverterTester {
@@ -15,8 +17,8 @@ public class ConverterTester {
 			String num = scan.next();
 			System.out.println(convertion.toDecimal(num));
 		} else {
-			int number = scan.nextInt();
-			System.out.println(convertion.toBinary(number));
+			long num = scan.nextLong();
+			System.out.println(convertion.toBinary(num));
 		}
 		scan.close();
 	}
